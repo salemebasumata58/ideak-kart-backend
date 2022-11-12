@@ -12,7 +12,9 @@ app.use(cors());
 
 app.use("/users", userRoute);
 
-
+app.get("/", (req,res )=>{
+    res.send("Hello Salem")
+})
 app.listen(PORT, async()=>{
     await connect();
     console.log(`listening to port ${PORT}`);
